@@ -25,20 +25,18 @@ We've provided you with a console that you can use to test your code. To enter a
 
 ## Deliverables
 
-Build the following methods on the `Customer` class
+Use best practices. Write re-usable single-responsibility methods. Use `attr_` macros where it's possible.
+
+### Relationships and utilty methods
+
+Build the following methods on the `Customer` class:
 
 * Customer.all
   * should return **all** of the customer instances
-* Customer.find_by_name(name)
-  * given a string of a **full name**, returns the **first customer** whose full name matches
-* Customer.find_all_by_first_name(name)
-  * given a string of a first name, returns an **array** containing all customers with that first name
-* Customer.all_names
-  * should return an **array** of all of the customer full names
 * Customer#add_review(restaurant, content)
-  * given a **restaurant object** and some review content (as a string), creates a new review and associates it with that customer and restaurant. A `Review` belongs to a `Customer` and belongs to a `Restaurant`
-
-Build out the following methods on the `Review` class
+  * given a **restaurant object** and some review content (as a string), creates a new review, associates it with that customer and restaurant, and returns the new review instance. A `Review` belongs to a `Customer` and belongs to a `Restaurant`
+  
+Build out the following methods on the `Review` class:
 
 * Review.all
   * returns all of the reviews
@@ -46,14 +44,28 @@ Build out the following methods on the `Review` class
   * returns the customer object for that given review
 * Review#restaurant
   * returns the restaurant object for that given review
-
-Build out the following methods on the `Restaurant` class
+  
+Build out the following methods on the `Restaurant` class:
 
 * Restaurant.all
   * returns an array of all restaurants
-* Restaurant.find_by_name(name)
-  * given a string of restaurant name, returns the first restaurant that matches
 * Restaurant#reviews
   * returns an array of all reviews for that restaurant
 * Restaurant#customers
   * returns all of customers who have written reviews of that restaurant. A `Restaurant` has many `Customers` and a `Customer` has many `Restaurants`
+
+### Algorithmic Methods (stretch)
+
+Build the following methods on the `Customer` class:
+
+* Customer.find_by_name(name)
+  * given a string of a **full name**, returns the **first customer** whose full name matches
+* Customer.find_all_by_first_name(name)
+  * given a string of a first name, returns an **array** containing all customers with that first name
+* Customer.all_names
+  * should return an **array** of all of the customer full names
+
+Build out the following methods on the `Restaurant` class:
+
+* Restaurant.find_by_name(name)
+  * given a string of restaurant name, returns the first restaurant that matches

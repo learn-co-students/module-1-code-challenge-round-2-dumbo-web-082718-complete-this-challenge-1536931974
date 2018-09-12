@@ -54,7 +54,7 @@ Build out the following methods on the `Restaurant` class:
 * Restaurant#customers
   * returns all of customers who have written reviews of that restaurant. A `Restaurant` has many `Customers` and a `Customer` has many `Restaurants`
 
-### Algorithmic Methods (stretch)
+### Algorithmic Methods (complete relationships + utility methods first)
 
 Build the following methods on the `Customer` class:
 

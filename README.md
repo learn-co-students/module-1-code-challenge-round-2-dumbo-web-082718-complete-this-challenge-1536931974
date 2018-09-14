@@ -25,36 +25,37 @@ We've provided you with a console that you can use to test your code. To enter a
 
 ## Deliverables
 
-Use best practices. Write re-usable single-responsibility methods. Use `attr_` macros where it's possible.
+Use best practices. Write re-usable single-responsibility methods. Use `attr_` macros where it's possible. We've broken down the methods into two different sections to
+distinguish methods that have behavior that only relates to its own class.
 
-### Relationships and utilty methods
+### Relationships and utility methods
 
 Build the following methods on the `Customer` class:
 
 * Customer.all
   * should return **all** of the customer instances
 * Customer#add_review(restaurant, content)
-  * given a **restaurant object** and some review content (as a string), creates a new review, associates it with that customer and restaurant, and returns the new review instance. A `Review` belongs to a `Customer` and belongs to a `Restaurant`
-  
+  * given a **restaurant object** and some review content (as a string), creates a new review, associates it with that customer and restaurant, and returns the new review instance. A `Review` belongs to a `Customer` and belongs to a `Restaurant`.
+
 Build out the following methods on the `Review` class:
 
 * Review.all
-  * returns all of the reviews
+  * returns all of the review instances
 * Review#customer
   * returns the customer object for that given review
 * Review#restaurant
   * returns the restaurant object for that given review
-  
+
 Build out the following methods on the `Restaurant` class:
 
 * Restaurant.all
-  * returns an array of all restaurants
+  * returns an array of all restaurant instances
 * Restaurant#reviews
-  * returns an array of all reviews for that restaurant
+  * returns an array of all review instances for that restaurant
 * Restaurant#customers
-  * returns all of customers who have written reviews of that restaurant. A `Restaurant` has many `Customers` and a `Customer` has many `Restaurants`
+  * returns all of customer instances who have written reviews of that restaurant. A `Restaurant` has many `Customers` and a `Customer` has many `Restaurants`.
 
-### Algorithmic Methods (complete relationships + utility methods first)
+### Higher-level Class Methods
 
 Build the following methods on the `Customer` class:
 
